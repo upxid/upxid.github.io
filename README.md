@@ -1,6 +1,6 @@
-# Solid
+# UPXID Landing Pages
 
-A landing page template.
+Selamat datang di website Utama UPXID.
 
 * [Getting started](#getting-started)
 
