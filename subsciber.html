@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPXID | Tech Creator</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b0f19;
+    color:#eaeaea;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+}
+
+nav h1{color:#00d4ff;}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:3em;
+}
+
+.hero span{color:#00d4ff;}
+
+.counter{
+    margin-top:30px;
+    font-size:2.5em;
+    font-weight:bold;
+    color:#00ffcc;
+}
+
+.label{
+    color:#aaa;
+    margin-top:5px;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 25px;
+    background:#00d4ff;
+    color:#000;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>UPXID</h1>
+</nav>
+
+<section class="hero">
+    <h2>Build. Learn. <span>Deploy.</span></h2>
+
+    <div class="counter" id="subs">Loading...</div>
+    <div class="label">Subscribers</div>
+
+    <a href="https://www.youtube.com/@upxid" target="_blank" class="btn">
+        Subscribe Now
+    </a>
+</section>
+
+<footer>
+    © 2026 UPXID
+</footer>
+
+<script>
+async function getSubs(){
+    try{
+        // API publik (tanpa key)
+        let res = await fetch("https://api.socialcounts.org/youtube-live-subscriber-count/UCv8_S6h1sVAX310dEqRpEXQ");
+        let data = await res.json();
+
+        let count = data.est_sub;
+        document.getElementById("subs").innerText =
+            count.toLocaleString();
+    }catch(e){
+        document.getElementById("subs").innerText = "Unavailable";
+    }
+}
+
+getSubs();
+setInterval(getSubs, 5000); // refresh tiap 5 detik
+</script>
+
+</body>
+</html>
