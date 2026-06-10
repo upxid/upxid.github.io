@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPXID | Tech Creator</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0f19;
+    color: #eaeaea;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+nav h1 {
+    color: #00d4ff;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle at center, #111 0%, #05070d 100%);
+}
+
+.hero h2 {
+    font-size: 3em;
+}
+
+.hero span {
+    color: #00d4ff;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background: linear-gradient(90deg, #00d4ff, #0066ff);
+    padding: 60px 20px;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    background: #05070d;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>UPXID</h1>
+    <div>
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h2>Build. Learn. <span>Deploy.</span></h2>
+        <p>Sharing pengalaman real tentang server, networking, dan teknologi modern</p>
+        <a href="https://www.youtube.com/@upxid" target="_blank" class="btn">Subscribe Channel</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h3>About UPXID</h3>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        UPXID adalah channel YouTube yang membahas server, MikroTik, Linux,
+        dan berbagai eksperimen IT. Fokus utama adalah memberikan tutorial
+        praktis yang bisa langsung diterapkan, bukan sekadar teori.
+    </p>
+</section>
+
+<section id="content" class="section">
+    <h3>Content Focus</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Server & Self Hosting</h4>
+            <p>Setup server, Proxmox, CasaOS, dan mini lab.</p>
+        </div>
+        <div class="card">
+            <h4>Networking</h4>
+            <p>MikroTik, traffic management, dan optimasi jaringan.</p>
+        </div>
+        <div class="card">
+            <h4>Linux</h4>
+            <p>Automation, script, dan konfigurasi sistem.</p>
+        </div>
+        <div class="card">
+            <h4>Hardware Review</h4>
+            <p>Mini PC, server build, dan testing performa.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="cta">
+        <h3>Join the Journey 🚀</h3>
+        <p>Subscribe untuk update tutorial dan eksperimen terbaru</p>
+        <a href="https://www.youtube.com/@upxid" target="_blank" class="btn">Go to YouTube</a>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>© 2026 UPXID | Tech Creator</p>
+</footer>
+
+</body>
+</html>
